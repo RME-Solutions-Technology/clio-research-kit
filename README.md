@@ -1,5 +1,7 @@
 # Clio research kit
 
+[![ci](https://github.com/RME-Solutions-Technology/clio-research-kit/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/RME-Solutions-Technology/clio-research-kit/actions/workflows/ci.yml)
+
 **Status: pre-1.0 (v0.1.0).** The API and file layout can still change between 0.x releases. The package is marked `"private": true`, so it is not published to npm yet; releases will be signed tarballs on GitHub once the release workflow has run (see [AUDIT.md](AUDIT.md) for how a release is checked). Repository: https://github.com/RME-Solutions-Technology/clio-research-kit.
 
 A small TypeScript toolkit for turning field and collection records into standards-shaped research packages. It was extracted from Clio Online Museum code and has no dependency on the Clio app.
