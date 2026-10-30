@@ -1,0 +1,32 @@
+{
+  "count": 2,
+  "next": null,
+  "previous": "https://kf.example.org/api/v2/assets/aSyntheticAssetUid0001/data/?format=json&limit=1",
+  "results": [
+    {
+      "_id": 1002,
+      "start": "2026-03-11T09:00:00.000+11:00",
+      "end": "2026-03-11T09:05:00.000+11:00",
+      "site/site_name": "=HYPERLINK(\"https://example.org\",\"open\")",
+      "habitat": "woodland",
+      "behaviour": "roosting",
+      "count": "many",
+      "observed_at": "2026-03-11T08:30:00",
+      "observed_on": "2026-03-11",
+      "meta/instanceID": "uuid:00000000-0000-4000-8000-000000000002",
+      "_uuid": "00000000-0000-4000-8000-000000000002",
+      "_attachments": [],
+      "_status": "submitted_via_web",
+      "_geolocation": [
+        null,
+        null
+      ],
+      "_submission_time": "2026-03-11T00:10:00",
+      "_tags": [],
+      "_notes": [],
+      "_validation_status": {},
+      "_submitted_by": null,
+      "__version__": "vSyntheticVersion1"
+    }
+  ]
+}

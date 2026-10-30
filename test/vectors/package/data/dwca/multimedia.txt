@@ -1,0 +1,2 @@
+id	type	format	identifier	references	license	rightsHolder
+https://example.org/records/rec-a	StillImage	image/jpeg	https://example.org/media/rec-a.jpg	https://example.org/records/rec-a	https://creativecommons.org/licenses/by/4.0/	Test Observer

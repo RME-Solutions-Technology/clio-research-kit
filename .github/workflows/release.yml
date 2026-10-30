@@ -1,0 +1,117 @@
+# Release signing and provenance. WRITTEN BUT NOT RUN: no release has been made yet.
+# See docs/release-signing.md for the plan, and AUDIT.md for how a reader checks the result.
+#
+# Triggered by pushing a tag like v0.1.0. Three jobs, so that code from the dependency install and the
+# build never runs with a token that can sign or write:
+#   build         read-only. Installs, runs every check, packs the tarball into release/ (NOT dist/, which is
+#                 tsc's output folder), makes the SBOM and checksums, uploads them as one artifact.
+#   sign-release  write + OIDC, but it only downloads that artifact: checks the checksums, signs the tarball
+#                 with cosign (Sigstore, keyless), records SLSA build provenance, creates the GitHub release.
+#                 It never installs dependencies and never runs repository scripts.
+#   publish-npm   DISABLED (if: false; npm publishing is off for now). When switched on: OIDC only, and only when the repository variable PUBLISH_TO_NPM is "true": npm publish with
+#                 provenance. package.json is "private": true today, so this cannot run until that is changed
+#                 on purpose. npm trusted publishing from a pre-built tarball has NOT been verified: try it on
+#                 a throwaway package first.
+name: release
+
+on:
+  push:
+    tags: ["v*.*.*"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - name: Checks (the test job of ci.yml; the validators job runs there too and must be green on this commit)
+        run: |
+          pnpm test
+          pnpm run type-check
+          pnpm run schemas:check
+          pnpm run check:imports
+          pnpm run check:scrub
+          pnpm run check:package
+      - name: Tag matches package.json
+        run: node -e 'const v=require("./package.json").version; if ("v"+v!==process.env.GITHUB_REF_NAME){console.error("tag "+process.env.GITHUB_REF_NAME+" != package.json "+v);process.exit(1)}'
+      - name: Pack into release/ (a folder of its own: dist/ holds the compiled sources)
+        run: |
+          mkdir release
+          pnpm pack --pack-destination release
+          node scripts/generate-sbom.ts
+          cp sbom/research-kit.cdx.json release/
+          (cd release && sha256sum -- *.tgz *.cdx.json > SHA256SUMS.txt)
+          ls -l release
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: release-files
+          path: release/
+          if-no-files-found: error
+          retention-days: 7
+
+  sign-release:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # An environment with required reviewers gives a human a last look before anything is signed.
+    environment: release
+    permissions:
+      contents: write      # create the GitHub release
+      id-token: write      # keyless signing (OIDC)
+      attestations: write  # GitHub artifact attestations
+    steps:
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          name: release-files
+          path: release
+      - name: Checksums still match what the build job wrote
+        run: cd release && sha256sum -c SHA256SUMS.txt
+      - uses: sigstore/cosign-installer@cad07c2e89fa2edd6e2d7bab4c1aa38e53f76003 # v4.1.1
+      - name: Sign the tarball (Sigstore, keyless)
+        run: |
+          for f in release/*.tgz; do
+            cosign sign-blob --yes --bundle "$f.sigstore.json" "$f"
+          done
+      - name: SLSA build provenance (GitHub artifact attestation)
+        uses: actions/attest-build-provenance@0f67c3f4856b2e3261c31976d6725780e5e4c373 # v4.1.1
+        with:
+          subject-path: |
+            release/*.tgz
+            release/*.cdx.json
+      - name: GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" release/* --repo "$GITHUB_REPOSITORY" --title "$GITHUB_REF_NAME" --verify-tag --notes "Verify this release with AUDIT.md (How to verify a release). Files: tarball, CycloneDX SBOM, SHA256SUMS.txt and the Sigstore bundle."
+
+  publish-npm:
+    # npm publishing is off for now. Disabled on purpose; package.json is also "private": true.
+    if: false
+    needs: sign-release
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write  # npm provenance and trusted publishing
+    steps:
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          name: release-files
+          path: release
+      - name: Publish with provenance
+        run: npm publish release/*.tgz --provenance --access public

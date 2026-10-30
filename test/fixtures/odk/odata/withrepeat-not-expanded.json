@@ -1,0 +1,28 @@
+{
+  "value": [
+    {
+      "__id": "rtwo",
+      "meta": {
+        "instanceID": "rtwo"
+      },
+      "name": "Bob",
+      "age": 34,
+      "children": {
+        "child@odata.navigationLink": "Submissions('rtwo')/children/child"
+      },
+      "__system": {
+        "submissionDate": "2026-03-01T01:02:03.000Z",
+        "updatedAt": null,
+        "submitterId": "5",
+        "submitterName": "Test Submitter",
+        "attachmentsPresent": 0,
+        "attachmentsExpected": 0,
+        "status": null,
+        "reviewState": null,
+        "deviceId": null,
+        "edits": 0,
+        "formVersion": ""
+      }
+    }
+  ]
+}

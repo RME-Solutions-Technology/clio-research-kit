@@ -1,0 +1,122 @@
+{
+  "note": "Exact output of the library for the fixed synthetic input in scripts/sample-package.ts. Regenerate with: node scripts/generate-vectors.ts",
+  "formats": {
+    "darwin-core-archive": "dwca/ (meta.xml, eml.xml, occurrence.txt, extendedmeasurementorfact.txt, multimedia.txt) and dwca.zip (stored ZIP of the same files)",
+    "bagit-1.0": "package/ (bagit.txt, bag-info.txt, manifest-sha256.txt, tagmanifest-sha256.txt, data/)",
+    "ro-crate-1.2": "package/data/ro-crate-metadata.json",
+    "frictionless-data-package": "package/data/datapackage.json with the CSV tables beside it"
+  },
+  "packageManifestSha256": "297f01bf51ba103088e969a70ebd08d22364d570732d92444dabf527908ccfa9",
+  "files": [
+    {
+      "path": "dwca/meta.xml",
+      "bytes": 3870,
+      "sha256": "53e7d8c29391e7300e67bedeeaf12fb06b3b55e4ba15b9fb224e91cb1d0d104b"
+    },
+    {
+      "path": "dwca/eml.xml",
+      "bytes": 3171,
+      "sha256": "8049287a4d49a8136277df17ed0b3e4cacb939c4f1281ff28874260c94122b6f"
+    },
+    {
+      "path": "dwca/occurrence.txt",
+      "bytes": 1304,
+      "sha256": "779af46bf37023612a77521f22b81eca9f77b7b953ca9057fdb6fdb9ab5790f9"
+    },
+    {
+      "path": "dwca/extendedmeasurementorfact.txt",
+      "bytes": 302,
+      "sha256": "f98e1a5d989c91a050b1f7bc981a1eeb9f7ac6a210dd30bfe49d21f377531cc8"
+    },
+    {
+      "path": "dwca/multimedia.txt",
+      "bytes": 243,
+      "sha256": "365d00b8cc270e68c240b4efba6c4427546ebfb51be14fa154a1784965b203df"
+    },
+    {
+      "path": "dwca.zip",
+      "bytes": 9436,
+      "sha256": "7140cbd2456d7c98fddb5c5fdaa83a283a43073ee625030d2df9e787619c0e29"
+    },
+    {
+      "path": "package/bag-info.txt",
+      "bytes": 222,
+      "sha256": "b9948aed90f9f727255cef5973d6e3536af862f93e58d06ca2a27c0e159eb339"
+    },
+    {
+      "path": "package/bagit.txt",
+      "bytes": 54,
+      "sha256": "1712ecfb074bf29c4188ad3421032509159a09739fd604f8fe57038b4ddefcc9"
+    },
+    {
+      "path": "package/manifest-sha256.txt",
+      "bytes": 1067,
+      "sha256": "297f01bf51ba103088e969a70ebd08d22364d570732d92444dabf527908ccfa9"
+    },
+    {
+      "path": "package/tagmanifest-sha256.txt",
+      "bytes": 241,
+      "sha256": "8454141b09ab38f7f706812f3fb3ad9dd3ce606492f1dd03e58f6c8353542a47"
+    },
+    {
+      "path": "package/data/README.txt",
+      "bytes": 1867,
+      "sha256": "1c00d8e5858a401ea781736a10d258a9a14ccb1d26c33145681a66d7a7db318d"
+    },
+    {
+      "path": "package/data/datapackage.json",
+      "bytes": 7260,
+      "sha256": "fb18d13771bfb608e9418d1e69d1d24121c4868f745edcb47c45c5213cf093ec"
+    },
+    {
+      "path": "package/data/dwca/eml.xml",
+      "bytes": 3211,
+      "sha256": "dc7beed7d4a389106f3ef8f7cd97dc6688c04a2b56db96746734c010074181c1"
+    },
+    {
+      "path": "package/data/dwca/extendedmeasurementorfact.txt",
+      "bytes": 302,
+      "sha256": "f98e1a5d989c91a050b1f7bc981a1eeb9f7ac6a210dd30bfe49d21f377531cc8"
+    },
+    {
+      "path": "package/data/dwca/meta.xml",
+      "bytes": 3870,
+      "sha256": "53e7d8c29391e7300e67bedeeaf12fb06b3b55e4ba15b9fb224e91cb1d0d104b"
+    },
+    {
+      "path": "package/data/dwca/multimedia.txt",
+      "bytes": 243,
+      "sha256": "365d00b8cc270e68c240b4efba6c4427546ebfb51be14fa154a1784965b203df"
+    },
+    {
+      "path": "package/data/dwca/occurrence.txt",
+      "bytes": 1304,
+      "sha256": "779af46bf37023612a77521f22b81eca9f77b7b953ca9057fdb6fdb9ab5790f9"
+    },
+    {
+      "path": "package/data/measurements.csv",
+      "bytes": 389,
+      "sha256": "f24520a9a4d4792d3e53b853ced0608542b5161127ffe93a137d565f3abaaaf6"
+    },
+    {
+      "path": "package/data/media-manifest.csv",
+      "bytes": 234,
+      "sha256": "3f0e51a6b0c3a5c452776a0de959a2ed4a947f529b4dfc86afb67ce5b9c44a6f"
+    },
+    {
+      "path": "package/data/records.csv",
+      "bytes": 506,
+      "sha256": "a873f9a241db49d8040b8fd127bde0b397b6fcda2ab289074f374772e3055f7d"
+    },
+    {
+      "path": "package/data/records.jsonl",
+      "bytes": 2884,
+      "sha256": "93752b2dbdd71eb65273bbadd3876febe618c935323591d7b6aa9a31e48c7a51"
+    },
+    {
+      "path": "package/data/ro-crate-metadata.json",
+      "bytes": 4993,
+      "sha256": "cc05479e38b627c60f8f4a21800a925bc0fa0662854e92471dfb53bef7accebe"
+    }
+  ]
+}

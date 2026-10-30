@@ -1,0 +1,21 @@
+{
+  "@odata.context": "https://your.odk.server/v1/projects/7/forms/simple.svc/$metadata#Submissions",
+  "value": [
+    {
+      "__id": "uuid:85cb9aff-005e-4edd-9739-dc9c1a829c44",
+      "age": 25,
+      "meta": {
+        "instanceID": "uuid:85cb9aff-005e-4edd-9739-dc9c1a829c44"
+      },
+      "name": "Bob"
+    },
+    {
+      "__id": "uuid:297000fd-8eb2-4232-8863-d25f82521b87",
+      "age": 30,
+      "meta": {
+        "instanceID": "uuid:297000fd-8eb2-4232-8863-d25f82521b87"
+      },
+      "name": "Alice"
+    }
+  ]
+}

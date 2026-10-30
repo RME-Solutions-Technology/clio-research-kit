@@ -1,0 +1,37 @@
+# OpenSSF Scorecard. Do not enable until the repository is public.
+# Scorecard reads repository settings (branch protection, code review, signed releases) through the
+# GitHub API, so it says little about a private repository, and publishing results needs a public one.
+# Enable it as the first thing after the repository is made public, then add the badge to README.md.
+# Checklist source: "Auditing an open-source data/identity tool", item 1.
+name: scorecard
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions: read-all
+
+jobs:
+  analysis:
+    if: ${{ vars.ENABLE_SCORECARD == 'true' }}
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write  # upload SARIF to code scanning
+      id-token: write         # publish results to scorecard.dev
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+      - uses: ossf/scorecard-action@2d1146689b8cda280b9bc96326124645441f03bc # v2.4.4 (the commit; 55891bb... is the annotated tag object, which is not a commit)
+        with:
+          results_file: results.sarif
+          results_format: sarif
+          publish_results: true
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: scorecard-sarif
+          path: results.sarif
+          retention-days: 5

@@ -1,0 +1,244 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "pkg-sample-0001",
+  "id": "pkg-sample-0001",
+  "title": "Synthetic sample research package",
+  "created": "2026-10-22T01:00:00Z",
+  "contributors": [
+    {
+      "title": "Test Team",
+      "roles": [
+        "creator"
+      ],
+      "path": "https://orcid.org/0000-0002-1825-0097"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0 International"
+    }
+  ],
+  "resources": [
+    {
+      "name": "records",
+      "path": "records.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "recordId",
+            "type": "string",
+            "description": "Stable record identifier."
+          },
+          {
+            "name": "versionId",
+            "type": "string",
+            "description": "Immutable record-version identifier."
+          },
+          {
+            "name": "profileId",
+            "type": "string",
+            "description": "Application profile the version was validated against."
+          },
+          {
+            "name": "profileVersion",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "eventDate",
+            "type": "string",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/eventDate",
+            "description": "Date or ISO 8601 interval as recorded."
+          },
+          {
+            "name": "decimalLatitude",
+            "type": "number",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/decimalLatitude"
+          },
+          {
+            "name": "decimalLongitude",
+            "type": "number",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/decimalLongitude"
+          },
+          {
+            "name": "coordinateUncertaintyInMeters",
+            "type": "number",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters"
+          },
+          {
+            "name": "recordedBy",
+            "type": "string",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/recordedBy"
+          },
+          {
+            "name": "licence",
+            "type": "string",
+            "rdfType": "http://purl.org/dc/terms/license"
+          },
+          {
+            "name": "projectSchemaKey",
+            "type": "string"
+          },
+          {
+            "name": "projectSchemaVersion",
+            "type": "string"
+          },
+          {
+            "name": "landingPage",
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "name": "informationWithheld",
+            "type": "string",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/informationWithheld",
+            "description": "Values left out of this export copy, if any."
+          }
+        ],
+        "primaryKey": [
+          "recordId",
+          "versionId"
+        ]
+      }
+    },
+    {
+      "name": "measurements",
+      "path": "measurements.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "versionId",
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "occurrenceID",
+            "type": "string",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/occurrenceID"
+          },
+          {
+            "name": "measurementID",
+            "type": "string",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/measurementID"
+          },
+          {
+            "name": "measurementType",
+            "type": "string",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/measurementType"
+          },
+          {
+            "name": "measurementTypeID",
+            "type": "string",
+            "rdfType": "http://rs.iobis.org/obis/terms/measurementTypeID"
+          },
+          {
+            "name": "measurementValue",
+            "type": "string",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/measurementValue"
+          },
+          {
+            "name": "measurementValueID",
+            "type": "string",
+            "rdfType": "http://rs.iobis.org/obis/terms/measurementValueID"
+          },
+          {
+            "name": "measurementAccuracy",
+            "type": "string",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/measurementAccuracy"
+          },
+          {
+            "name": "measurementUnit",
+            "type": "string",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/measurementUnit"
+          },
+          {
+            "name": "measurementUnitID",
+            "type": "string",
+            "rdfType": "http://rs.iobis.org/obis/terms/measurementUnitID"
+          },
+          {
+            "name": "measurementDeterminedDate",
+            "type": "string",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/measurementDeterminedDate"
+          },
+          {
+            "name": "measurementDeterminedBy",
+            "type": "string",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/measurementDeterminedBy"
+          },
+          {
+            "name": "measurementMethod",
+            "type": "string",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/measurementMethod"
+          },
+          {
+            "name": "measurementRemarks",
+            "type": "string",
+            "rdfType": "http://rs.tdwg.org/dwc/terms/measurementRemarks"
+          }
+        ]
+      }
+    },
+    {
+      "name": "media-manifest",
+      "path": "media-manifest.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8"
+    },
+    {
+      "name": "dwca-meta",
+      "path": "dwca/meta.xml",
+      "format": "xml",
+      "mediatype": "application/xml",
+      "encoding": "utf-8",
+      "description": "Darwin Core Archive descriptor: maps every column of the dwca tables to a term IRI."
+    },
+    {
+      "name": "dwca-eml",
+      "path": "dwca/eml.xml",
+      "format": "xml",
+      "mediatype": "application/xml",
+      "encoding": "utf-8",
+      "description": "Dataset metadata in EML 2.1.1, following the GBIF Metadata Profile."
+    },
+    {
+      "name": "dwca-occurrence",
+      "path": "dwca/occurrence.txt",
+      "format": "tsv",
+      "mediatype": "text/tab-separated-values",
+      "encoding": "utf-8",
+      "description": "Tab-delimited Darwin Core table without quoting; dwca/meta.xml describes its columns."
+    },
+    {
+      "name": "dwca-extendedmeasurementorfact",
+      "path": "dwca/extendedmeasurementorfact.txt",
+      "format": "tsv",
+      "mediatype": "text/tab-separated-values",
+      "encoding": "utf-8",
+      "description": "Tab-delimited Darwin Core table without quoting; dwca/meta.xml describes its columns."
+    },
+    {
+      "name": "dwca-multimedia",
+      "path": "dwca/multimedia.txt",
+      "format": "tsv",
+      "mediatype": "text/tab-separated-values",
+      "encoding": "utf-8",
+      "description": "Tab-delimited Darwin Core table without quoting; dwca/meta.xml describes its columns."
+    }
+  ]
+}

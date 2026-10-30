@@ -1,0 +1,2 @@
+id	measurementID	measurementType	measurementTypeID	measurementValue	measurementUnit	measurementUnitID
+https://example.org/records/rec-a	https://example.org/records/rec-a#measurement-m1	Wing length	https://example.org/terms/wingLength	82	millimetres	http://vocab.nerc.ac.uk/collection/P06/current/UXMM/

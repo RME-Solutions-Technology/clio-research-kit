@@ -1,0 +1,2 @@
+versionId,id,occurrenceID,measurementID,measurementType,measurementTypeID,measurementValue,measurementValueID,measurementAccuracy,measurementUnit,measurementUnitID,measurementDeterminedDate,measurementDeterminedBy,measurementMethod,measurementRemarks
+v1,rec-a,,m1,Wing length,https://example.org/terms/wingLength,82,,,millimetres,http://vocab.nerc.ac.uk/collection/P06/current/UXMM/,,,,

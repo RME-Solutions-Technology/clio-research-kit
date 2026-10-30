@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+    <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <h:head>
+            <h:title>nestedGroup</h:title>
+            <model odk:xforms-version="1.0.0">
+                <instance>
+                    <data id="nestedGroup">
+                        <text/>
+                        <hospital>
+                            <name/>
+                            <hiv_medication>
+                                <have_hiv_medication/>
+                            </hiv_medication>
+                        </hospital>
+                        <meta>
+                            <instanceID/>
+                        </meta>
+                    </data>
+                </instance>
+                <bind nodeset="/data/text" type="string"/>
+                <bind nodeset="/data/hospital/name" type="string"/>
+                <bind nodeset="/data/hospital/hiv_medication/have_hiv_medication" type="string"/>
+                <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+            </model>
+        </h:head>
+        <h:body>
+            <input ref="/data/text">
+                <label>text</label>
+            </input>
+            <group ref="/data/hospital">
+                <label>Hospital</label>
+                <input ref="/data/hospital/name">
+                    <label>What is the name of this hospital?</label>
+                </input>
+                <group ref="/data/hospital/hiv_medication">
+                    <label>HIV Medication</label>
+                    <input ref="/data/hospital/hiv_medication/have_hiv_medication">
+                        <label>Does this hospital have HIV medication?</label>
+                    </input>
+                </group>
+            </group>
+        </h:body>
+    </h:html>

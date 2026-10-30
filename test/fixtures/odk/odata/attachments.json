@@ -1,0 +1,46 @@
+{
+  "value": [
+    {
+      "__id": "both",
+      "meta": {
+        "instanceID": "both"
+      },
+      "file1": "my_file1.mp4",
+      "file2": "here_is_file2.jpg",
+      "__system": {
+        "submissionDate": "2026-03-01T01:02:03.000Z",
+        "updatedAt": null,
+        "submitterId": "5",
+        "submitterName": "Test Submitter",
+        "attachmentsPresent": 1,
+        "attachmentsExpected": 2,
+        "status": null,
+        "reviewState": null,
+        "deviceId": null,
+        "edits": 0,
+        "formVersion": ""
+      }
+    },
+    {
+      "__id": "unicode",
+      "meta": {
+        "instanceID": "unicode"
+      },
+      "file1": "fîlé2",
+      "file2": "f😂le3صادق",
+      "__system": {
+        "submissionDate": "2026-03-01T01:02:03.000Z",
+        "updatedAt": null,
+        "submitterId": "5",
+        "submitterName": "Test Submitter",
+        "attachmentsPresent": 0,
+        "attachmentsExpected": 2,
+        "status": null,
+        "reviewState": null,
+        "deviceId": null,
+        "edits": 0,
+        "formVersion": ""
+      }
+    }
+  ]
+}

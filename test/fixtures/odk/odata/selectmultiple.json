@@ -1,0 +1,73 @@
+{
+  "value": [
+    {
+      "__id": "one",
+      "meta": {
+        "instanceID": "one"
+      },
+      "q1": "a b",
+      "g1": {
+        "q2": "x y z"
+      },
+      "__system": {
+        "submissionDate": "2026-03-01T01:02:03.000Z",
+        "updatedAt": null,
+        "submitterId": "5",
+        "submitterName": "Test Submitter",
+        "attachmentsPresent": 0,
+        "attachmentsExpected": 0,
+        "status": null,
+        "reviewState": null,
+        "deviceId": null,
+        "edits": 0,
+        "formVersion": ""
+      }
+    },
+    {
+      "__id": "two",
+      "meta": {
+        "instanceID": "two"
+      },
+      "q1": "b",
+      "g1": {
+        "q2": "m x"
+      },
+      "__system": {
+        "submissionDate": "2026-03-01T01:02:03.000Z",
+        "updatedAt": null,
+        "submitterId": "5",
+        "submitterName": "Test Submitter",
+        "attachmentsPresent": 0,
+        "attachmentsExpected": 0,
+        "status": null,
+        "reviewState": null,
+        "deviceId": null,
+        "edits": 0,
+        "formVersion": ""
+      }
+    },
+    {
+      "__id": "three",
+      "meta": {
+        "instanceID": "three"
+      },
+      "q1": " b c",
+      "g1": {
+        "q2": null
+      },
+      "__system": {
+        "submissionDate": "2026-03-01T01:02:03.000Z",
+        "updatedAt": null,
+        "submitterId": "5",
+        "submitterName": "Test Submitter",
+        "attachmentsPresent": 0,
+        "attachmentsExpected": 0,
+        "status": null,
+        "reviewState": null,
+        "deviceId": null,
+        "edits": 0,
+        "formVersion": ""
+      }
+    }
+  ]
+}

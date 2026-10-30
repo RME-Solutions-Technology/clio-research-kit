@@ -1,0 +1,101 @@
+{
+  "content": {
+    "survey": [
+      {
+        "type": "start",
+        "name": "start",
+        "$xpath": "start"
+      },
+      {
+        "type": "end",
+        "name": "end",
+        "$xpath": "end"
+      },
+      {
+        "type": "begin_group",
+        "name": "site",
+        "$xpath": "site"
+      },
+      {
+        "type": "text",
+        "name": "site_name",
+        "$xpath": "site/site_name"
+      },
+      {
+        "type": "geopoint",
+        "name": "location",
+        "$xpath": "site/location"
+      },
+      {
+        "type": "end_group"
+      },
+      {
+        "type": "select_one habitat_list",
+        "name": "habitat",
+        "$xpath": "habitat"
+      },
+      {
+        "type": "select_multiple behaviour_list",
+        "name": "behaviour",
+        "$xpath": "behaviour"
+      },
+      {
+        "type": "integer",
+        "name": "count",
+        "$xpath": "count"
+      },
+      {
+        "type": "datetime",
+        "name": "observed_at",
+        "$xpath": "observed_at"
+      },
+      {
+        "type": "date",
+        "name": "observed_on",
+        "$xpath": "observed_on"
+      },
+      {
+        "type": "image",
+        "name": "photo",
+        "$xpath": "photo"
+      },
+      {
+        "type": "geotrace",
+        "name": "route",
+        "$xpath": "route"
+      },
+      {
+        "type": "geoshape",
+        "name": "plot",
+        "$xpath": "plot"
+      },
+      {
+        "type": "begin_repeat",
+        "name": "individuals",
+        "$xpath": "individuals"
+      },
+      {
+        "type": "text",
+        "name": "tag",
+        "$xpath": "individuals/tag"
+      },
+      {
+        "type": "decimal",
+        "name": "wing_mm",
+        "$xpath": "individuals/wing_mm"
+      },
+      {
+        "type": "image",
+        "name": "individual_photo",
+        "$xpath": "individuals/individual_photo"
+      },
+      {
+        "type": "end_repeat"
+      },
+      {
+        "type": "note",
+        "name": "thanks"
+      }
+    ]
+  }
+}

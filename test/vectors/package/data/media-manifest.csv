@@ -1,0 +1,2 @@
+recordId,objectKey,mediaType,bytes,sha256,licence,rightsHolder,included
+rec-a,objects/a,image/jpeg,10,bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb,https://creativecommons.org/licenses/by/4.0/,Test Observer,false

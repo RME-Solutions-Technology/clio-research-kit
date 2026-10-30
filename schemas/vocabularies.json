@@ -1,0 +1,980 @@
+{
+  "$comment": "Generated from src/lane-vocabularies.ts and src/pollen-vocabulary.ts. Do not edit by hand.",
+  "lane": {
+    "LANE_AAVSO_FILTERS": [
+      "U",
+      "B",
+      "V",
+      "R",
+      "I",
+      "J",
+      "H",
+      "K",
+      "TG",
+      "TB",
+      "TR",
+      "CV",
+      "CR",
+      "SU",
+      "SG",
+      "SR",
+      "SI",
+      "SZ",
+      "MA",
+      "MB",
+      "MI",
+      "ZS",
+      "Y",
+      "HA",
+      "HAC",
+      "O"
+    ],
+    "LANE_AAVSO_MAGNITUDE_TYPES": [
+      "STD",
+      "DIF",
+      "ABS"
+    ],
+    "LANE_AAVSO_OBSERVATION_TYPES": [
+      "CCD",
+      "DSLR",
+      "PEP",
+      "Visual"
+    ],
+    "LANE_ACID_REACTION": [
+      "strong_fizz",
+      "weak_fizz",
+      "no_reaction",
+      "not_tested"
+    ],
+    "LANE_AGE_BASIS": [
+      "index_fossil",
+      "radiometric_date",
+      "geological_map_unit",
+      "published_source",
+      "estimate",
+      "unknown"
+    ],
+    "LANE_AGE_TYPES": [
+      "radiocarbon_years_bp",
+      "calibrated_years_bp",
+      "calendar_year_ad_bc",
+      "other",
+      "not_recorded"
+    ],
+    "LANE_BASIS_OF_RECORD": [
+      "HumanObservation",
+      "MachineObservation",
+      "MaterialSample",
+      "PreservedSpecimen",
+      "LivingSpecimen",
+      "FossilSpecimen",
+      "Occurrence"
+    ],
+    "LANE_BASIS_OF_RECORD_IRIS": {
+      "FossilSpecimen": "http://rs.tdwg.org/dwc/dwctype/FossilSpecimen",
+      "HumanObservation": "http://rs.tdwg.org/dwc/dwctype/HumanObservation",
+      "LivingSpecimen": "http://rs.tdwg.org/dwc/dwctype/LivingSpecimen",
+      "MachineObservation": "http://rs.tdwg.org/dwc/dwctype/MachineObservation",
+      "MaterialSample": "http://rs.tdwg.org/dwc/dwctype/MaterialSample",
+      "Occurrence": "http://rs.tdwg.org/dwc/dwctype/Occurrence",
+      "PreservedSpecimen": "http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen"
+    },
+    "LANE_CALIBRATION_METHODS": [
+      "stage_micrometer",
+      "scale_bar_two_point",
+      "calibrated_software_metadata",
+      "camera_pixel_pitch_and_optics",
+      "nominal_from_magnification",
+      "none"
+    ],
+    "LANE_CGI_LITHOLOGY_SCHEME": "http://resource.geosciml.org/classifier/cgi/lithology",
+    "LANE_COLLECTION_AUTHORITY": [
+      "landholder_consent",
+      "fossicking_licence_or_miners_right",
+      "public_fossicking_area",
+      "permit",
+      "purchased",
+      "inherited",
+      "existing_collection",
+      "collected_before_rules_known",
+      "none",
+      "unknown"
+    ],
+    "LANE_COLLECTION_DEVICES": [
+      "syringe",
+      "pump",
+      "bottle",
+      "bag",
+      "scoop",
+      "kit_with_inline_filter",
+      "other"
+    ],
+    "LANE_DEPTH_DATUMS": [
+      "sediment_surface",
+      "ground_surface",
+      "water_surface",
+      "core_top",
+      "other"
+    ],
+    "LANE_ENVO_IRI_PATTERN": "^http://purl\\.obolibrary\\.org/obo/ENVO_[0-9]{8}$",
+    "LANE_ESTABLISHMENT_MEANS": [
+      "native",
+      "nativeReintroduced",
+      "introduced",
+      "introducedAssistedColonisation",
+      "vagrant",
+      "uncertain",
+      "nativeEndemic"
+    ],
+    "LANE_ESTABLISHMENT_MEANS_IRIS": {
+      "introduced": "http://rs.tdwg.org/dwcem/values/e003",
+      "introducedAssistedColonisation": "http://rs.tdwg.org/dwcem/values/e004",
+      "native": "http://rs.tdwg.org/dwcem/values/e001",
+      "nativeEndemic": "http://rs.tdwg.org/dwcem/values/e007",
+      "nativeReintroduced": "http://rs.tdwg.org/dwcem/values/e002",
+      "uncertain": "http://rs.tdwg.org/dwcem/values/e006",
+      "vagrant": "http://rs.tdwg.org/dwcem/values/e005"
+    },
+    "LANE_FIREBALL_BRIGHTNESS": [
+      "like_brightest_stars",
+      "like_venus",
+      "brighter_than_venus",
+      "like_half_moon",
+      "like_full_moon",
+      "brighter_than_full_moon",
+      "not_sure"
+    ],
+    "LANE_FIREBALL_SOUND": [
+      "none",
+      "at_the_same_time",
+      "delayed",
+      "not_sure"
+    ],
+    "LANE_GEODETIC_DATUMS": [
+      "WGS84",
+      "GDA2020",
+      "GDA94",
+      "AGD84",
+      "AGD66",
+      "NAD83",
+      "ETRS89",
+      "unknown"
+    ],
+    "LANE_GEODETIC_DATUM_IRIS": {
+      "AGD66": "http://www.opengis.net/def/crs/EPSG/0/4202",
+      "AGD84": "http://www.opengis.net/def/crs/EPSG/0/4203",
+      "ETRS89": "http://www.opengis.net/def/crs/EPSG/0/4258",
+      "GDA2020": "http://www.opengis.net/def/crs/EPSG/0/7844",
+      "GDA94": "http://www.opengis.net/def/crs/EPSG/0/4283",
+      "NAD83": "http://www.opengis.net/def/crs/EPSG/0/4269",
+      "WGS84": "http://www.opengis.net/def/crs/EPSG/0/4326"
+    },
+    "LANE_GEOLOGIC_AGE_IRIS": [
+      "http://resource.geosciml.org/classifier/ics/ischart/Archean",
+      "http://resource.geosciml.org/classifier/ics/ischart/Cambrian",
+      "http://resource.geosciml.org/classifier/ics/ischart/Carboniferous",
+      "http://resource.geosciml.org/classifier/ics/ischart/Cenozoic",
+      "http://resource.geosciml.org/classifier/ics/ischart/Cretaceous",
+      "http://resource.geosciml.org/classifier/ics/ischart/Devonian",
+      "http://resource.geosciml.org/classifier/ics/ischart/Eocene",
+      "http://resource.geosciml.org/classifier/ics/ischart/Hadean",
+      "http://resource.geosciml.org/classifier/ics/ischart/Holocene",
+      "http://resource.geosciml.org/classifier/ics/ischart/Jurassic",
+      "http://resource.geosciml.org/classifier/ics/ischart/Mesozoic",
+      "http://resource.geosciml.org/classifier/ics/ischart/Miocene",
+      "http://resource.geosciml.org/classifier/ics/ischart/Neogene",
+      "http://resource.geosciml.org/classifier/ics/ischart/Oligocene",
+      "http://resource.geosciml.org/classifier/ics/ischart/Ordovician",
+      "http://resource.geosciml.org/classifier/ics/ischart/Paleocene",
+      "http://resource.geosciml.org/classifier/ics/ischart/Paleogene",
+      "http://resource.geosciml.org/classifier/ics/ischart/Paleozoic",
+      "http://resource.geosciml.org/classifier/ics/ischart/Permian",
+      "http://resource.geosciml.org/classifier/ics/ischart/Phanerozoic",
+      "http://resource.geosciml.org/classifier/ics/ischart/Pleistocene",
+      "http://resource.geosciml.org/classifier/ics/ischart/Pliocene",
+      "http://resource.geosciml.org/classifier/ics/ischart/Proterozoic",
+      "http://resource.geosciml.org/classifier/ics/ischart/Quaternary",
+      "http://resource.geosciml.org/classifier/ics/ischart/Silurian",
+      "http://resource.geosciml.org/classifier/ics/ischart/Triassic"
+    ],
+    "LANE_GEOLOGY_COLLECTION_METHODS": [
+      "hand_collected_surface",
+      "hand_dug",
+      "float_loose",
+      "outcrop_hammer",
+      "mine_dump",
+      "stream_gravel_panned",
+      "core_or_drill",
+      "photographed_not_collected",
+      "purchased_or_gifted",
+      "inherited",
+      "unknown"
+    ],
+    "LANE_GEOLOGY_IDENTIFICATION_BASIS": [
+      "seller_or_label",
+      "matched_photos",
+      "physical_tests",
+      "specialist_opinion",
+      "instrumental_analysis",
+      "best_guess"
+    ],
+    "LANE_HERITAGE_CHECK": [
+      "no_signs_seen",
+      "possible_cultural_material",
+      "not_assessed"
+    ],
+    "LANE_ICS_CHART_BASE": "http://resource.geosciml.org/classifier/ics/ischart",
+    "LANE_IMAGING_METHODS": [
+      "brightfield",
+      "darkfield",
+      "phase_contrast",
+      "differential_interference_contrast",
+      "polarised_light",
+      "widefield_fluorescence",
+      "confocal",
+      "scanning_electron",
+      "transmission_electron",
+      "stereo_or_dissecting",
+      "other"
+    ],
+    "LANE_IMA_STATUS": [
+      "approved",
+      "grandfathered",
+      "discredited",
+      "rejected",
+      "questionable",
+      "hypothetical",
+      "intermediate_member",
+      "variety_or_trade_name",
+      "unidentified"
+    ],
+    "LANE_INSDC_ACCESSION_PATTERN": "^(?:PRJ[EDN][A-Z][0-9]+|SAM[EDN][A-Z]?[0-9]+|[EDS]R[APRSXZ][0-9]{6,})$",
+    "LANE_INSDC_BIOSAMPLE_PATTERN": "^SAM[EDN][A-Z]?[0-9]+$",
+    "LANE_LAND_TENURE": [
+      "private_land",
+      "crown_or_public_land",
+      "national_park_or_reserve",
+      "state_forest",
+      "mining_lease",
+      "aboriginal_land",
+      "unknown"
+    ],
+    "LANE_LIFE_STAGES": [
+      "adult",
+      "juvenile",
+      "subadult",
+      "larva",
+      "pupa",
+      "nymph",
+      "imago",
+      "egg",
+      "embryo",
+      "tadpole",
+      "nestling",
+      "fledgling",
+      "chick",
+      "seedling",
+      "flowering",
+      "fruiting",
+      "other",
+      "unknown"
+    ],
+    "LANE_LITHOLOGY_IRIS": {
+      "amphibolite": "http://resource.geosciml.org/classifier/cgi/lithology/amphibolite",
+      "andesite": "http://resource.geosciml.org/classifier/cgi/lithology/andesite",
+      "basalt": "http://resource.geosciml.org/classifier/cgi/lithology/basalt",
+      "breccia": "http://resource.geosciml.org/classifier/cgi/lithology/breccia",
+      "chalk": "http://resource.geosciml.org/classifier/cgi/lithology/chalk",
+      "chert": "http://resource.geosciml.org/classifier/cgi/lithology/chert",
+      "claystone": "http://resource.geosciml.org/classifier/cgi/lithology/claystone",
+      "coal": "http://resource.geosciml.org/classifier/cgi/lithology/coal",
+      "conglomerate": "http://resource.geosciml.org/classifier/cgi/lithology/conglomerate",
+      "dacite": "http://resource.geosciml.org/classifier/cgi/lithology/dacite",
+      "diorite": "http://resource.geosciml.org/classifier/cgi/lithology/diorite",
+      "gabbro": "http://resource.geosciml.org/classifier/cgi/lithology/gabbro",
+      "gneiss": "http://resource.geosciml.org/classifier/cgi/lithology/gneiss",
+      "granite": "http://resource.geosciml.org/classifier/cgi/lithology/granite",
+      "granodiorite": "http://resource.geosciml.org/classifier/cgi/lithology/granodiorite",
+      "hornfels": "http://resource.geosciml.org/classifier/cgi/lithology/hornfels",
+      "igneous_rock": "http://resource.geosciml.org/classifier/cgi/lithology/igneous_rock",
+      "limestone": "http://resource.geosciml.org/classifier/cgi/lithology/limestone",
+      "marble": "http://resource.geosciml.org/classifier/cgi/lithology/marble",
+      "metamorphic_rock": "http://resource.geosciml.org/classifier/cgi/lithology/metamorphic_rock",
+      "mudstone": "http://resource.geosciml.org/classifier/cgi/lithology/mudstone",
+      "pegmatite": "http://resource.geosciml.org/classifier/cgi/lithology/pegmatite",
+      "peridotite": "http://resource.geosciml.org/classifier/cgi/lithology/peridotite",
+      "phyllite": "http://resource.geosciml.org/classifier/cgi/lithology/phyllite",
+      "quartzite": "http://resource.geosciml.org/classifier/cgi/lithology/quartzite",
+      "rhyolite": "http://resource.geosciml.org/classifier/cgi/lithology/rhyolite",
+      "sandstone": "http://resource.geosciml.org/classifier/cgi/lithology/sandstone",
+      "schist": "http://resource.geosciml.org/classifier/cgi/lithology/schist",
+      "sedimentary_rock": "http://resource.geosciml.org/classifier/cgi/lithology/sedimentary_rock",
+      "serpentinite": "http://resource.geosciml.org/classifier/cgi/lithology/serpentinite",
+      "siltstone": "http://resource.geosciml.org/classifier/cgi/lithology/siltstone",
+      "slate": "http://resource.geosciml.org/classifier/cgi/lithology/slate"
+    },
+    "LANE_LITHOLOGY_TERMS": [
+      "igneous_rock",
+      "sedimentary_rock",
+      "metamorphic_rock",
+      "granite",
+      "granodiorite",
+      "diorite",
+      "gabbro",
+      "peridotite",
+      "pegmatite",
+      "basalt",
+      "andesite",
+      "dacite",
+      "rhyolite",
+      "sandstone",
+      "siltstone",
+      "mudstone",
+      "claystone",
+      "conglomerate",
+      "breccia",
+      "limestone",
+      "chalk",
+      "chert",
+      "coal",
+      "marble",
+      "quartzite",
+      "slate",
+      "phyllite",
+      "schist",
+      "gneiss",
+      "hornfels",
+      "amphibolite",
+      "serpentinite",
+      "other",
+      "unknown"
+    ],
+    "LANE_LOCATION_VISIBILITY": [
+      "public",
+      "generalized",
+      "restricted",
+      "not_collected"
+    ],
+    "LANE_LUSTRE": [
+      "metallic",
+      "submetallic",
+      "vitreous",
+      "adamantine",
+      "resinous",
+      "pearly",
+      "silky",
+      "greasy",
+      "dull",
+      "not_recorded"
+    ],
+    "LANE_MAGNETISM": [
+      "strong",
+      "weak",
+      "none",
+      "not_tested"
+    ],
+    "LANE_METEORITE_CHECK": [
+      "not_suspected",
+      "possible_meteorite",
+      "not_assessed"
+    ],
+    "LANE_METEOR_COUNT_METHODS": [
+      "count",
+      "plot"
+    ],
+    "LANE_METEOR_REPORT_KINDS": [
+      "visual_meteor_count",
+      "fireball_sighting",
+      "video_clip"
+    ],
+    "LANE_MICROSCOPY_SPECIMEN_KINDS": [
+      "biological",
+      "mineral_or_rock",
+      "other_material"
+    ],
+    "LANE_NAME_RESOLUTION": [
+      "exact_match",
+      "close_spelling_match",
+      "higher_rank_match",
+      "no_match_kept_as_typed"
+    ],
+    "LANE_NEGATIVE_CONTROL_EXPORT": {
+      "distilled_water": "distilled water",
+      "dna_free_pcr_mix": "DNA-free PCR mix",
+      "empty_collection_device": "empty collection device",
+      "empty_collection_tube": "empty collection tube",
+      "phosphate_buffer": "phosphate buffer",
+      "sterile_swab": "sterile swab",
+      "sterile_syringe": "sterile syringe"
+    },
+    "LANE_NEGATIVE_CONTROL_TYPES": [
+      "dna_free_pcr_mix",
+      "distilled_water",
+      "empty_collection_device",
+      "empty_collection_tube",
+      "phosphate_buffer",
+      "sterile_swab",
+      "sterile_syringe"
+    ],
+    "LANE_OBJECTIVE_IMMERSION": [
+      "air",
+      "oil",
+      "water",
+      "water_dipping",
+      "glycerol",
+      "silicone_oil",
+      "other",
+      "not_recorded"
+    ],
+    "LANE_OCCURRENCE_STATUS": [
+      "detected",
+      "notDetected"
+    ],
+    "LANE_OCCURRENCE_STATUS_EXPORT": {
+      "detected": "present",
+      "notDetected": "absent"
+    },
+    "LANE_PHOTO_SCALE": [
+      "scale_bar_or_ruler",
+      "known_size_object",
+      "calibrated_image",
+      "no_scale"
+    ],
+    "LANE_PLATE_SOLVE_STATUS": [
+      "not_attempted",
+      "header_claims_wcs",
+      "solved_by_contributor",
+      "unknown"
+    ],
+    "LANE_POLLEN_MOUNTANTS": [
+      "glycerol",
+      "glycerol_jelly",
+      "silicone_oil",
+      "other",
+      "not_recorded"
+    ],
+    "LANE_PRESERVATIVES": [
+      "kit_storage_buffer",
+      "lysis_buffer",
+      "longmires_solution",
+      "ethanol",
+      "frozen_without_preservative",
+      "chilled_without_preservative",
+      "other",
+      "not_recorded"
+    ],
+    "LANE_READ_LAYOUTS": [
+      "single",
+      "paired",
+      "other"
+    ],
+    "LANE_SAMPLE_CATEGORIES": [
+      "sample",
+      "negative_control",
+      "positive_control",
+      "pcr_standard"
+    ],
+    "LANE_SAMPLE_OBJECT_TYPES": [
+      "hand_specimen",
+      "loose_crystal",
+      "fragment",
+      "slab",
+      "thin_section",
+      "polished_section",
+      "core",
+      "powder",
+      "loose_sediment",
+      "fossil_specimen",
+      "other",
+      "unknown"
+    ],
+    "LANE_SAMPLE_TAXA": [
+      "freshwater_metagenome",
+      "aquatic_metagenome",
+      "marine_metagenome",
+      "seawater_metagenome",
+      "other"
+    ],
+    "LANE_SAMPLE_TAXON_IRIS": {
+      "aquatic_metagenome": "http://purl.obolibrary.org/obo/NCBITaxon_1169740",
+      "freshwater_metagenome": "http://purl.obolibrary.org/obo/NCBITaxon_449393",
+      "marine_metagenome": "http://purl.obolibrary.org/obo/NCBITaxon_408172",
+      "seawater_metagenome": "http://purl.obolibrary.org/obo/NCBITaxon_1561972"
+    },
+    "LANE_SCALE_EVIDENCE": [
+      "stage_micrometer_image",
+      "scale_bar_in_image",
+      "file_metadata",
+      "no_scale"
+    ],
+    "LANE_SEX": [
+      "female",
+      "male",
+      "hermaphrodite",
+      "mixed",
+      "indeterminate",
+      "not_recorded",
+      "not_applicable"
+    ],
+    "LANE_SEX_IRIS": {
+      "female": "http://vocab.nerc.ac.uk/collection/S10/current/S102/",
+      "indeterminate": "http://vocab.nerc.ac.uk/collection/S10/current/S105/",
+      "male": "http://vocab.nerc.ac.uk/collection/S10/current/S103/",
+      "mixed": "http://vocab.nerc.ac.uk/collection/S10/current/S108/"
+    },
+    "LANE_SURVEY_PROTOCOLS": [
+      "point_count",
+      "transect",
+      "quadrat",
+      "area_search",
+      "stationary_count",
+      "travelling_count",
+      "pitfall_trap",
+      "light_trap",
+      "net",
+      "camera_trap",
+      "acoustic_recorder",
+      "incidental",
+      "other"
+    ],
+    "LANE_TARGET_GENES": [
+      "12S_rRNA",
+      "16S_rRNA",
+      "18S_rRNA",
+      "23S_rRNA",
+      "COI",
+      "ITS",
+      "rbcL",
+      "matK",
+      "trnL",
+      "other"
+    ],
+    "LANE_TIME_SCALES": [
+      "UTC",
+      "TAI",
+      "TT",
+      "TDB",
+      "GPS",
+      "unknown"
+    ],
+    "LANE_TIME_SOURCES": [
+      "gps",
+      "network_time",
+      "phone_network",
+      "camera_clock",
+      "manual_watch",
+      "unknown"
+    ],
+    "LANE_UDUNITS_LENGTH": {
+      "metre": "meter",
+      "micrometre": "micrometer",
+      "millimetre": "millimeter",
+      "nanometre": "nanometer"
+    },
+    "LANE_WATER_BODY_TYPES": [
+      "river_or_creek",
+      "lake_or_dam",
+      "estuary",
+      "ocean_or_coast",
+      "other"
+    ],
+    "LANE_WATER_ENVO_DEFAULTS": {
+      "estuary": {
+        "envBroadScale": "http://purl.obolibrary.org/obo/ENVO_01000020",
+        "envMedium": "http://purl.obolibrary.org/obo/ENVO_01000301"
+      },
+      "lake_or_dam": {
+        "envBroadScale": "http://purl.obolibrary.org/obo/ENVO_01000252",
+        "envMedium": "http://purl.obolibrary.org/obo/ENVO_04000007"
+      },
+      "ocean_or_coast": {
+        "envBroadScale": "http://purl.obolibrary.org/obo/ENVO_00000447",
+        "envMedium": "http://purl.obolibrary.org/obo/ENVO_00002149"
+      },
+      "river_or_creek": {
+        "envBroadScale": "http://purl.obolibrary.org/obo/ENVO_01000253",
+        "envMedium": "http://purl.obolibrary.org/obo/ENVO_01000599"
+      }
+    },
+    "LANE_WILD_STATUS": [
+      "wild",
+      "planted_or_cultivated",
+      "captive_or_kept",
+      "not_sure"
+    ]
+  },
+  "pollenMorphology": {
+    "id": "clio-pollen-morphology-0-1-0",
+    "key": "clio.pollen-morphology",
+    "version": "0.1.0",
+    "title": "Clio candidate pollen morphology vocabulary",
+    "status": "candidate",
+    "conformanceClaim": "none",
+    "sourceCitations": [
+      {
+        "label": "Illustrated Pollen Terminology, 2nd edition",
+        "doi": "10.1007/978-3-319-71365-6",
+        "uri": "https://link.springer.com/book/10.1007/978-3-319-71365-6",
+        "licence": "CC BY 4.0",
+        "note": "Primary open reference for the application labels and glossary structure."
+      },
+      {
+        "label": "Glossary of pollen and spore terminology",
+        "doi": "10.1016/j.revpalbo.2006.06.008",
+        "uri": "https://doi.org/10.1016/j.revpalbo.2006.06.008",
+        "note": "Widely used palynological reference terminology; cited as source context, not copied as a database glossary."
+      }
+    ],
+    "traits": [
+      {
+        "key": "dispersal_unit",
+        "label": "Dispersal unit",
+        "valueKind": "controlled",
+        "terms": [
+          "monad",
+          "dyad",
+          "tetrad",
+          "polyad",
+          "massula",
+          "pollinium",
+          "other"
+        ],
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ]
+      },
+      {
+        "key": "tetrad_configuration",
+        "label": "Tetrad configuration",
+        "valueKind": "controlled",
+        "terms": [
+          "linear",
+          "rhomboidal",
+          "tetragonal",
+          "t_shaped",
+          "decussate",
+          "tetrahedral",
+          "other"
+        ],
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ]
+      },
+      {
+        "key": "polarity",
+        "label": "Polarity",
+        "valueKind": "controlled",
+        "terms": [
+          "apolar",
+          "isopolar",
+          "heteropolar"
+        ],
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ]
+      },
+      {
+        "key": "symmetry",
+        "label": "Symmetry",
+        "valueKind": "controlled",
+        "terms": [
+          "radial",
+          "bilateral"
+        ],
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ]
+      },
+      {
+        "key": "shape_class",
+        "label": "Shape class (P/E ratio)",
+        "valueKind": "controlled",
+        "terms": [
+          "peroblate",
+          "oblate",
+          "suboblate",
+          "oblate-spheroidal",
+          "prolate-spheroidal",
+          "subprolate",
+          "prolate",
+          "perprolate",
+          "other"
+        ],
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ],
+        "methods": [
+          "LM",
+          "SEM",
+          "TEM",
+          "other",
+          "not_recorded"
+        ]
+      },
+      {
+        "key": "polar_axis_length",
+        "label": "Polar axis length",
+        "valueKind": "numeric",
+        "unitPolicy": "optional",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ],
+        "methods": [
+          "LM",
+          "SEM",
+          "TEM",
+          "other",
+          "not_recorded"
+        ]
+      },
+      {
+        "key": "equatorial_diameter",
+        "label": "Equatorial diameter",
+        "valueKind": "numeric",
+        "unitPolicy": "optional",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ],
+        "methods": [
+          "LM",
+          "SEM",
+          "TEM",
+          "other",
+          "not_recorded"
+        ]
+      },
+      {
+        "key": "p_e_ratio",
+        "label": "Polar/equatorial ratio",
+        "valueKind": "numeric",
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ],
+        "methods": [
+          "LM",
+          "SEM",
+          "TEM",
+          "other",
+          "not_recorded"
+        ]
+      },
+      {
+        "key": "aperture_presence",
+        "label": "Aperture presence",
+        "valueKind": "controlled",
+        "terms": [
+          "present",
+          "inaperturate"
+        ],
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ]
+      },
+      {
+        "key": "aperture_count",
+        "label": "Aperture count",
+        "valueKind": "numeric",
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ],
+        "methods": [
+          "LM",
+          "SEM",
+          "TEM",
+          "other",
+          "not_recorded"
+        ]
+      },
+      {
+        "key": "aperture_type",
+        "label": "Aperture type",
+        "valueKind": "controlled",
+        "terms": [
+          "colpus",
+          "pore",
+          "sulcus",
+          "ulcus",
+          "colporus",
+          "other"
+        ],
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ],
+        "methods": [
+          "LM",
+          "SEM",
+          "TEM",
+          "other",
+          "not_recorded"
+        ]
+      },
+      {
+        "key": "aperture_position",
+        "label": "Aperture position",
+        "valueKind": "controlled",
+        "terms": [
+          "proximal",
+          "distal",
+          "equatorial",
+          "global",
+          "other"
+        ],
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ]
+      },
+      {
+        "key": "aperture_feature",
+        "label": "Aperture feature",
+        "valueKind": "controlled",
+        "terms": [
+          "annulus",
+          "margo",
+          "costa",
+          "operculum",
+          "membrane",
+          "other"
+        ],
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ]
+      },
+      {
+        "key": "sculpture",
+        "label": "Sculpture / ornamentation",
+        "valueKind": "controlled",
+        "terms": [
+          "psilate",
+          "scabrate",
+          "echinate",
+          "granulate",
+          "gemmate",
+          "verrucate",
+          "baculate",
+          "clavate",
+          "reticulate",
+          "striate",
+          "rugulate",
+          "perforate",
+          "foveolate",
+          "other"
+        ],
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ],
+        "methods": [
+          "LM",
+          "SEM",
+          "TEM",
+          "other",
+          "not_recorded"
+        ]
+      },
+      {
+        "key": "tectum",
+        "label": "Tectum",
+        "valueKind": "controlled",
+        "terms": [
+          "eutectate",
+          "semitectate",
+          "atectate",
+          "other"
+        ],
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ],
+        "methods": [
+          "LM",
+          "SEM",
+          "TEM",
+          "other",
+          "not_recorded"
+        ]
+      },
+      {
+        "key": "infratectum",
+        "label": "Infratectum",
+        "valueKind": "controlled",
+        "terms": [
+          "alveolate",
+          "columellate",
+          "granular",
+          "absent",
+          "other"
+        ],
+        "unitPolicy": "none",
+        "observationStates": [
+          "observed",
+          "not_observed",
+          "not_applicable",
+          "indeterminate"
+        ],
+        "methods": [
+          "LM",
+          "SEM",
+          "TEM",
+          "other",
+          "not_recorded"
+        ]
+      }
+    ]
+  }
+}

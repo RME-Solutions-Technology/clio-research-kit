@@ -1,0 +1,75 @@
+{
+  "count": 2,
+  "next": "https://kf.example.org/api/v2/assets/aSyntheticAssetUid0001/data/?format=json&limit=1&start=1",
+  "previous": null,
+  "results": [
+    {
+      "_id": 1001,
+      "formhub/uuid": "00000000-0000-4000-8000-0000000000aa",
+      "start": "2026-03-10T08:00:00.000+11:00",
+      "end": "2026-03-10T08:20:10.500+11:00",
+      "site/site_name": "Synthetic creek",
+      "site/location": "-33.8 151.2 12.5 4.8",
+      "habitat": "wetland",
+      "behaviour": "foraging calling",
+      "count": "3",
+      "observed_at": "2026-03-10T07:45:00.000+11:00",
+      "observed_on": "2026-03-10",
+      "photo": "bird_1.jpg",
+      "route": "-33.8 151.2 0 0;-33.81 151.21 0 0",
+      "plot": "-33.8 151.2 0 0;-33.8 151.21 0 0;-33.81 151.21 0 0;-33.8 151.2 0 0",
+      "individuals": [
+        {
+          "individuals/tag": "A1",
+          "individuals/wing_mm": "112.5",
+          "individuals/individual_photo": "ind_a1.jpg"
+        },
+        {
+          "individuals/tag": "A2",
+          "individuals/wing_mm": "109"
+        }
+      ],
+      "meta/instanceID": "uuid:00000000-0000-4000-8000-000000000001",
+      "_xform_id_string": "aSyntheticAssetUid0001",
+      "_uuid": "00000000-0000-4000-8000-000000000001",
+      "_attachments": [
+        {
+          "download_url": "https://kf.example.org/api/v2/assets/aSyntheticAssetUid0001/data/1001/attachments/501/",
+          "download_large_url": "https://kf.example.org/api/v2/assets/aSyntheticAssetUid0001/data/1001/attachments/501/?format=large",
+          "mimetype": "image/jpeg",
+          "filename": "synthetic_user/attachments/0000/1001/bird_1.jpg",
+          "media_file_basename": "bird_1.jpg",
+          "instance": 1001,
+          "xform": 7,
+          "id": 501,
+          "is_deleted": false
+        },
+        {
+          "download_url": "https://kf.example.org/api/v2/assets/aSyntheticAssetUid0001/data/1001/attachments/502/",
+          "download_large_url": "https://kf.example.org/api/v2/assets/aSyntheticAssetUid0001/data/1001/attachments/502/?format=large",
+          "mimetype": "image/jpeg",
+          "filename": "synthetic_user/attachments/0000/1001/ind_a1.jpg",
+          "media_file_basename": "ind_a1.jpg",
+          "instance": 1001,
+          "xform": 7,
+          "id": 502,
+          "is_deleted": false
+        }
+      ],
+      "_status": "submitted_via_web",
+      "_geolocation": [
+        -33.8,
+        151.2
+      ],
+      "_submission_time": "2026-03-10T00:30:12",
+      "_tags": [],
+      "_notes": [],
+      "_validation_status": {
+        "uid": "validation_status_approved",
+        "label": "Approved"
+      },
+      "_submitted_by": "synthetic_user",
+      "__version__": "vSyntheticVersion1"
+    }
+  ]
+}

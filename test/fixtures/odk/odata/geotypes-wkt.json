@@ -1,0 +1,41 @@
+{
+  "value": [
+    {
+      "__id": "geo1",
+      "survey_started_at": "2026-03-05T09:15:00.000+11:00",
+      "survey_ended_at": "2026-03-05T09:40:30.250+11:00",
+      "singular": {
+        "input_geopoint": "POINT (0 50 0)",
+        "input_geotrace": "LINESTRING (1 51 0, 2 52 0)",
+        "input_geoshape": "POLYGON ((3 53 0, 4 54 0, 5 55 0, 3 53 0))"
+      },
+      "plural_count": "2",
+      "plural": [
+        {
+          "__id": "p1",
+          "input_geopoint_repeat": "POINT (4 54 1)",
+          "input_geotrace_repeat": "LINESTRING (5 55 1, 6 56 1)",
+          "input_geoshape_repeat": "POLYGON ((7 57 1, 8 58 1, 9 59 1, 7 57 1))",
+          "nested_repeat_count": "0",
+          "nested_repeat": []
+        }
+      ],
+      "meta": {
+        "instanceID": "geo1"
+      },
+      "__system": {
+        "submissionDate": "2026-03-01T01:02:03.000Z",
+        "updatedAt": null,
+        "submitterId": "5",
+        "submitterName": "Test Submitter",
+        "attachmentsPresent": 0,
+        "attachmentsExpected": 0,
+        "status": null,
+        "reviewState": null,
+        "deviceId": null,
+        "edits": 0,
+        "formVersion": ""
+      }
+    }
+  ]
+}

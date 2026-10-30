@@ -1,0 +1,5 @@
+Bag-Software-Agent: Clio research kit package builder (clio.research-package/v1)
+Bagging-Date: 2026-10-22
+External-Identifier: pkg-sample-0001
+External-Description: Synthetic sample research package
+Payload-Oxum: 27063.12

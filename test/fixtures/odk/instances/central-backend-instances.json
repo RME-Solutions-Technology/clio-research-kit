@@ -1,0 +1,32 @@
+{
+  "simple": {
+    "one": "<data id=\"simple\"><meta><instanceID>one</instanceID></meta><name>Alice</name><age>30</age></data>",
+    "two": "<data id=\"simple\"><meta><instanceID>two</instanceID></meta><name>Bob</name><age>34</age></data>",
+    "three": "<data id=\"simple\"><meta><instanceID>three</instanceID></meta><name>Chelsea</name><age>38</age></data>"
+  },
+  "withrepeat": {
+    "one": "<data id=\"withrepeat\" version=\"1.0\"><orx:meta xmlns:orx=\"http://openrosa.org/xforms\"><orx:instanceID>rone</orx:instanceID></orx:meta><name>Alice</name><age>30</age></data>",
+    "two": "<data id=\"withrepeat\" version=\"1.0\"><orx:meta xmlns:orx=\"http://openrosa.org/xforms\"><orx:instanceID>rtwo</orx:instanceID></orx:meta><name>Bob</name><age>34</age><children><child><name>Billy</name><age>4</age></child><child><name>Blaine</name><age>6</age></child></children></data>",
+    "three": "<data id=\"withrepeat\" version=\"1.0\"><orx:meta xmlns:orx=\"http://openrosa.org/xforms\"><orx:instanceID>rthree</orx:instanceID></orx:meta><name>Chelsea</name><age>38</age><children><child><name>Candace</name><age>2</age></child></children></data>"
+  },
+  "doubleRepeat": {
+    "double": "<data id=\"doubleRepeat\" version=\"1.0\">\n    <orx:meta><orx:instanceID>double</orx:instanceID></orx:meta>\n    <name>Vick</name>\n    <children>\n      <child>\n        <name>Alice</name>\n      </child>\n      <child>\n        <name>Bob</name>\n        <toys>\n          <toy><name>Twilight Sparkle</name></toy>\n          <toy><name>Pinkie Pie</name></toy>\n          <toy><name>Applejack</name></toy>\n          <toy><name>Spike</name></toy>\n        </toys>\n      </child>\n      <child>\n        <name>Chelsea</name>\n        <toys>\n          <toy><name>Rainbow Dash</name></toy>\n          <toy><name>Rarity</name></toy>\n          <toy><name>Fluttershy</name></toy>\n          <toy><name>Princess Luna</name></toy>\n        </toys>\n      </child>\n    </children>\n  </data>"
+  },
+  "binaryType": {
+    "one": "<data id=\"binaryType\"><meta><instanceID>bone</instanceID></meta><file1>my_file1.mp4</file1></data>",
+    "two": "<data id=\"binaryType\"><meta><instanceID>btwo</instanceID></meta><file2>here_is_file2.jpg</file2></data>",
+    "both": "<data id=\"binaryType\"><meta><instanceID>both</instanceID></meta><file1>my_file1.mp4</file1><file2>here_is_file2.jpg</file2></data>",
+    "unicode": "<data id=\"binaryType\"><meta><instanceID>both</instanceID></meta><file1>fîlé2</file1><file2>f😂le3صادق</file2></data>"
+  },
+  "selectMultiple": {
+    "one": "<data id=\"selectMultiple\"><meta><instanceID>one</instanceID></meta><q1>a b</q1><g1><q2>x y z</q2></g1></data>",
+    "two": "<data id=\"selectMultiple\"><meta><instanceID>two</instanceID></meta><q1>b</q1><g1><q2>m x</q2></g1></data>",
+    "three": "<data id=\"selectMultiple\"><meta><instanceID>three</instanceID></meta><q1> b c</q1></data>"
+  },
+  "groupRepeat": {
+    "one": "<data xmlns:jr=\"http://openrosa.org/javarosa\" xmlns:orx=\"http://openrosa.org/xforms\" id=\"groupRepeat\">\n      <text>xyz</text>\n      <child_repeat>\n        <name>John</name>\n        <address>\n          <city>Toronto</city>\n          <country>Canada</country>\n        </address>\n      </child_repeat>\n      <child_repeat>\n        <name>Jane</name>\n        <address>\n          <city>New York</city>\n          <country>US</country>\n        </address>\n      </child_repeat>\n      <meta>\n        <instanceID>uuid:2be07915-2c9c-401a-93ea-1c8f3f8e68f6</instanceID>\n      </meta>\n    </data>"
+  },
+  "nestedGroup": {
+    "one": "<data xmlns:jr=\"http://openrosa.org/javarosa\" xmlns:orx=\"http://openrosa.org/xforms\" id=\"nestedGroup\">\n      <text>xyz</text>\n      <hospital>\n        <name>AKUH</name>\n        <hiv_medication>\n          <have_hiv_medication>Yes</have_hiv_medication>\n        </hiv_medication>\n      </hospital>\n      <meta>\n        <instanceID>uuid:f7908274-ef70-4169-90a0-e1389ab732ff</instanceID>\n      </meta>\n    </data>"
+  }
+}

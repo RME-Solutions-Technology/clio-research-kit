@@ -1,0 +1,93 @@
+# Continuous integration. Written but not yet run on GitHub.
+# Action versions are pinned to commit SHAs (the tag is in the comment). Re-check each pin
+# before the first run, and let Dependabot (.github/dependabot.yml) keep them current.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: tests, types, schemas, import graph, scrub
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+      - name: Enable the pnpm version pinned in package.json
+        run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm run type-check
+      - name: Lane schemas match the generator
+        run: pnpm run schemas:check
+      - name: Import graph (src/ stands alone, no runtime dependencies)
+        run: pnpm run check:imports
+      - name: Pre-publication scrub
+        run: pnpm run check:scrub
+      - name: The packed tarball installs and works (JavaScript plus .d.ts, in an empty folder)
+        run: pnpm run check:package
+
+  validators:
+    name: format validators (Frictionless, RO-Crate, DwC-A read)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements-validators.txt
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: python -m pip install -r requirements-validators.txt
+      - name: Build the sample package and run the validators
+        run: node scripts/run-validators.ts --require
+      - name: Keep the report and the files that were checked
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: validation
+          path: tmp/validation
+          retention-days: 30
+      # The GBIF data validator needs a GBIF account, so it is NOT run here and no
+      # credentials are stored. It is a manual release step: see AUDIT.md.
+
+  sbom:
+    name: software bill of materials
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: node scripts/generate-sbom.ts
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: sbom
+          path: sbom
+          retention-days: 30

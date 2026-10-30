@@ -1,0 +1,200 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.2/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "identifier": "pkg-sample-0001",
+      "name": "Synthetic sample research package",
+      "description": "Synthetic sample research package",
+      "datePublished": "2026-10-22T01:00:00Z",
+      "license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "author": {
+        "@id": "https://orcid.org/0000-0002-1825-0097"
+      },
+      "hasPart": [
+        {
+          "@id": "dwca/"
+        },
+        {
+          "@id": "README.txt"
+        },
+        {
+          "@id": "datapackage.json"
+        },
+        {
+          "@id": "dwca/eml.xml"
+        },
+        {
+          "@id": "dwca/extendedmeasurementorfact.txt"
+        },
+        {
+          "@id": "dwca/meta.xml"
+        },
+        {
+          "@id": "dwca/multimedia.txt"
+        },
+        {
+          "@id": "dwca/occurrence.txt"
+        },
+        {
+          "@id": "measurements.csv"
+        },
+        {
+          "@id": "media-manifest.csv"
+        },
+        {
+          "@id": "records.csv"
+        },
+        {
+          "@id": "records.jsonl"
+        }
+      ]
+    },
+    {
+      "@id": "dwca/",
+      "@type": "Dataset",
+      "name": "Darwin Core Archive (unzipped)",
+      "description": "meta.xml, eml.xml and tab-delimited Darwin Core tables, ready to zip for a validator. This export has not validated, registered or published them.",
+      "hasPart": [
+        {
+          "@id": "dwca/meta.xml"
+        },
+        {
+          "@id": "dwca/eml.xml"
+        },
+        {
+          "@id": "dwca/occurrence.txt"
+        },
+        {
+          "@id": "dwca/extendedmeasurementorfact.txt"
+        },
+        {
+          "@id": "dwca/multimedia.txt"
+        }
+      ]
+    },
+    {
+      "@id": "README.txt",
+      "@type": "File",
+      "name": "Reading guide",
+      "encodingFormat": "text/plain",
+      "contentSize": "1867"
+    },
+    {
+      "@id": "datapackage.json",
+      "@type": "File",
+      "name": "Frictionless Data Package descriptor",
+      "encodingFormat": "application/json",
+      "contentSize": "7260"
+    },
+    {
+      "@id": "dwca/eml.xml",
+      "@type": "File",
+      "name": "Dataset metadata (EML 2.1.1, GBIF Metadata Profile)",
+      "encodingFormat": "application/xml",
+      "contentSize": "3211"
+    },
+    {
+      "@id": "dwca/extendedmeasurementorfact.txt",
+      "@type": "File",
+      "name": "Extended measurements or facts (eMoF)",
+      "encodingFormat": "text/tab-separated-values",
+      "contentSize": "302"
+    },
+    {
+      "@id": "dwca/meta.xml",
+      "@type": "File",
+      "name": "Darwin Core Archive descriptor (meta.xml)",
+      "encodingFormat": "application/xml",
+      "contentSize": "3870"
+    },
+    {
+      "@id": "dwca/multimedia.txt",
+      "@type": "File",
+      "name": "Simple Multimedia",
+      "encodingFormat": "text/tab-separated-values",
+      "contentSize": "243"
+    },
+    {
+      "@id": "dwca/occurrence.txt",
+      "@type": "File",
+      "name": "Darwin Core occurrences (core)",
+      "encodingFormat": "text/tab-separated-values",
+      "contentSize": "1304"
+    },
+    {
+      "@id": "measurements.csv",
+      "@type": "File",
+      "name": "Measurements (eMoF columns)",
+      "encodingFormat": "text/csv",
+      "contentSize": "389"
+    },
+    {
+      "@id": "media-manifest.csv",
+      "@type": "File",
+      "name": "Media manifest",
+      "encodingFormat": "text/csv",
+      "contentSize": "234"
+    },
+    {
+      "@id": "records.csv",
+      "@type": "File",
+      "name": "Record versions (flat)",
+      "encodingFormat": "text/csv",
+      "contentSize": "506"
+    },
+    {
+      "@id": "records.jsonl",
+      "@type": "File",
+      "name": "Record versions (lossless)",
+      "encodingFormat": "application/x-ndjson",
+      "contentSize": "2884"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-1825-0097",
+      "@type": "Person",
+      "name": "Test Team"
+    },
+    {
+      "@id": "https://creativecommons.org/licenses/by/4.0/",
+      "@type": "CreativeWork",
+      "name": "Creative Commons Attribution 4.0 International",
+      "identifier": "CC-BY-4.0"
+    },
+    {
+      "@id": "#export",
+      "@type": "CreateAction",
+      "name": "Research package export",
+      "endTime": "2026-10-22T01:00:00Z",
+      "instrument": {
+        "@id": "#clio-builder"
+      },
+      "result": {
+        "@id": "./"
+      },
+      "agent": {
+        "@id": "https://orcid.org/0000-0002-1825-0097"
+      }
+    },
+    {
+      "@id": "#clio-builder",
+      "@type": "SoftwareApplication",
+      "name": "Clio research kit package builder",
+      "url": "https://github.com/RME-Solutions-Technology/clio-research-kit",
+      "version": "clio.research-package/v1"
+    }
+  ]
+}

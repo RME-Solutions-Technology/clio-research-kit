@@ -1,0 +1,49 @@
+Clio research kit (package @clio-museum/research-kit)
+Copyright 2026 RME Solutions Technology
+
+Licensed under the Apache License, Version 2.0 (see LICENSE). The files under
+schemas/ are licensed under CC BY 4.0 (see schemas/LICENSE).
+
+This software was extracted from code written for Clio Online Museum.
+
+Standards and specifications that this software reads or writes are the work of
+their own organisations: Darwin Core and Ecological
+Metadata Language (TDWG, GBIF), BagIt (IETF RFC 8493), RO-Crate (the RO-Crate
+community), Frictionless Data Package (Open Knowledge Foundation), ORCID, and
+the vocabularies named in the schema files. Naming a standard here is not a
+claim of conformance or endorsement. This project is not affiliated with, or
+endorsed by, ODK (Open Data Kit), KoboToolbox, GBIF, TDWG (Darwin Core), the
+RO-Crate community, the Frictionless Data project or any other organisation named.
+
+This package lists term names and identifiers from third-party vocabularies in schemas/:
+- Darwin Core (TDWG), CC BY 4.0, and Dublin Core Terms (DCMI).
+- CGI Simple Lithology, CGI Geoscience Terminology Working Group, CC BY 4.0,
+  https://github.com/CGI-IUGS/cgi-vocabs
+- International Chronostratigraphic Chart, International Commission on Stratigraphy
+  (www.stratigraphy.org), referenced by IRI only. The ICS chart is under the ICS
+  permissions policy (non-commercial, unmodified use), not CC BY, so its unit labels are
+  not redistributed in the vocabulary files pending permission. Cohen, K.M., Finney, S.M.,
+  Gibbard, P.L., Fan, J.-X., 2013. The ICS International Chronostratigraphic Chart.
+  Episodes 36, 199-204.
+- NERC Vocabulary Server collection S10, British Oceanographic Data Centre, CC BY 4.0.
+- ENVO and NCBITaxon (OBO Foundry), CC0 1.0. NCBI Taxonomy: Federhen S. 2012, The NCBI
+  Taxonomy database, Nucleic Acids Research 40, D136-D143.
+- OGC coordinate reference system identifiers, AAVSO filter codes and UDUNITS spellings:
+  licences not checked.
+Names and identifiers are unchanged except where noted. What was taken, from where, and the
+licence as far as it is known is in schemas/SOURCES.md. This project is not affiliated with
+or endorsed by these organisations.
+
+Test data is synthetic, except the ODK sample forms, sample submissions and
+one documentation example under test/fixtures/odk/. Those come from ODK
+Central Backend and are used under the Apache License, Version 2.0 (see
+test/fixtures/README.md):
+
+    ODK Central Backend
+    Copyright 2017 ODK Central Developers
+    https://github.com/getodk/central-backend
+
+The files were copied without change except for trimming blank lines at the start and end.
+
+The ORCID iD 0000-0002-1825-0097 is the example iD in ORCID's own
+documentation.

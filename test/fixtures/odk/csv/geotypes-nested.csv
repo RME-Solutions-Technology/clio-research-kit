@@ -1,0 +1,3 @@
+repeatnested_group-input_geopoint_deeply_nested-Latitude,repeatnested_group-input_geopoint_deeply_nested-Longitude,repeatnested_group-input_geopoint_deeply_nested-Altitude,repeatnested_group-input_geopoint_deeply_nested-Accuracy,PARENT_KEY,KEY
+11,11,11,0,geo1/plural[1],geo1/plural[1]/nested_repeat[1]
+11,11,11,0,geo1/plural[2],geo1/plural[2]/nested_repeat[1]

@@ -1,0 +1,94 @@
+{
+  "@odata.context": "https://central.example.org/v1/projects/7/forms/withrepeat.svc/$metadata#Submissions",
+  "value": [
+    {
+      "__id": "rone",
+      "meta": {
+        "instanceID": "rone"
+      },
+      "name": "Alice",
+      "age": 30,
+      "children": {
+        "child": []
+      },
+      "__system": {
+        "submissionDate": "2026-03-01T01:02:03.000Z",
+        "updatedAt": null,
+        "submitterId": "5",
+        "submitterName": "Test Submitter",
+        "attachmentsPresent": 0,
+        "attachmentsExpected": 0,
+        "status": null,
+        "reviewState": null,
+        "deviceId": null,
+        "edits": 0,
+        "formVersion": ""
+      }
+    },
+    {
+      "__id": "rtwo",
+      "meta": {
+        "instanceID": "rtwo"
+      },
+      "name": "Bob",
+      "age": 34,
+      "children": {
+        "child": [
+          {
+            "__id": "h1",
+            "name": "Billy",
+            "age": 4
+          },
+          {
+            "__id": "h2",
+            "name": "Blaine",
+            "age": 6
+          }
+        ]
+      },
+      "__system": {
+        "submissionDate": "2026-03-02T04:00:00.000Z",
+        "updatedAt": "2026-03-03T05:00:00.000Z",
+        "submitterId": "5",
+        "submitterName": "Test Submitter",
+        "attachmentsPresent": 0,
+        "attachmentsExpected": 0,
+        "status": null,
+        "reviewState": null,
+        "deviceId": null,
+        "edits": 1,
+        "formVersion": "1.0"
+      }
+    },
+    {
+      "__id": "rthree",
+      "meta": {
+        "instanceID": "rthree"
+      },
+      "name": "Chelsea",
+      "age": 38,
+      "children": {
+        "child": [
+          {
+            "__id": "h3",
+            "name": "Candace",
+            "age": 2
+          }
+        ]
+      },
+      "__system": {
+        "submissionDate": "2026-03-03T04:00:00.000Z",
+        "updatedAt": null,
+        "submitterId": "5",
+        "submitterName": "Test Submitter",
+        "attachmentsPresent": 0,
+        "attachmentsExpected": 0,
+        "status": null,
+        "reviewState": null,
+        "deviceId": null,
+        "edits": 0,
+        "formVersion": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+input_geopoint_repeat-Latitude,input_geopoint_repeat-Longitude,input_geopoint_repeat-Altitude,input_geopoint_repeat-Accuracy,input_geotrace_repeat,input_geoshape_repeat,nested_repeat_count,PARENT_KEY,KEY
+54,4,1,0,"55 5 1 0; 56 6 1 0","57 7 1 0; 58 8 1 0; 59 9 1 0; 57 7 1 0",1,geo1,geo1/plural[1]
+54,4,1,0,"55 5 1 0; 56 6 1 0","57 7 1 0; 58 8 1 0; 59 9 1 0; 57 7 1 0",1,geo1,geo1/plural[2]

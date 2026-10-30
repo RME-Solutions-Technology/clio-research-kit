@@ -1,0 +1,2 @@
+SubmissionDate,survey_started_at,singular-input_geopoint-Latitude,singular-input_geopoint-Longitude,singular-input_geopoint-Altitude,singular-input_geopoint-Accuracy,singular-input_geotrace,singular-input_geoshape,plural_count,survey_ended_at,meta-instanceID,KEY,SubmitterID,SubmitterName,AttachmentsPresent,AttachmentsExpected,Status,ReviewState,DeviceID,Edits,FormVersion
+2026-03-01T01:02:03.000Z,2026-03-05T09:15:00.000+11:00,50,0,0,7.5,"51 1 0 0; 52 2 0 0","53 3 0; 54 4 0 0; 55 5 0 0; 53 3 0 0",2,2026-03-05T09:40:30.250+11:00,geo1,geo1,5,Test Submitter,0,0,,,,0,10

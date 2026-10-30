@@ -1,0 +1,6 @@
+# Format validators run by scripts/run-validators.ts and the CI "validators" job.
+# Pinned to the versions that produced the results recorded in docs/validation-results.md.
+# These are Python tools used only to check the library's output. They are not part of the package.
+frictionless==5.21.0
+roc-validator==0.13.1
+python-dwca-reader==0.17.1

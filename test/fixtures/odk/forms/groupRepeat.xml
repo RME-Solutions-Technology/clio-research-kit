@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+    <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <h:head>
+            <h:title>groupRepeat</h:title>
+            <model odk:xforms-version="1.0.0">
+                <instance>
+                    <data id="groupRepeat">
+                        <text/>
+                        <child_repeat jr:template="">
+                            <name/>
+                            <address>
+                                <city/>
+                                <country/>
+                            </address>
+                        </child_repeat>
+                        <child_repeat>
+                            <name/>
+                            <address>
+                                <city/>
+                                <country/>
+                            </address>
+                        </child_repeat>
+                        <meta>
+                            <instanceID/>
+                        </meta>
+                    </data>
+                </instance>
+                <bind nodeset="/data/text" type="string"/>
+                <bind nodeset="/data/child_repeat/name" type="string"/>
+                <bind nodeset="/data/child_repeat/address/city" type="string"/>
+                <bind nodeset="/data/child_repeat/address/country" type="string"/>
+                <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+            </model>
+        </h:head>
+        <h:body>
+            <input ref="/data/text">
+                <label>text</label>
+            </input>
+            <group ref="/data/child_repeat">
+                <label>Children</label>
+                <repeat nodeset="/data/child_repeat">
+                    <input ref="/data/child_repeat/name">
+                        <label>Child's name</label>
+                    </input>
+                    <group ref="/data/child_repeat/address">
+                        <label>group</label>
+                        <input ref="/data/child_repeat/address/city">
+                            <label>City</label>
+                        </input>
+                        <input ref="/data/child_repeat/address/country">
+                            <label>Country</label>
+                        </input>
+                    </group>
+                </repeat>
+            </group>
+        </h:body>
+    </h:html>
