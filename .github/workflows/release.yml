@@ -46,7 +46,7 @@ jobs:
           pnpm run check:package
       - name: Tag matches package.json
         run: node -e 'const v=require("./package.json").version; if ("v"+v!==process.env.GITHUB_REF_NAME){console.error("tag "+process.env.GITHUB_REF_NAME+" != package.json "+v);process.exit(1)}'
-      - name: Pack into release/ (a folder of its own: dist/ holds the compiled sources)
+      - name: "Pack into release/ (a folder of its own; dist/ holds the compiled sources)"
         run: |
           mkdir release
           pnpm pack --pack-destination release
@@ -93,7 +93,8 @@ jobs:
       - name: GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" release/* --repo "$GITHUB_REPOSITORY" --title "$GITHUB_REF_NAME" --verify-tag --notes "Verify this release with AUDIT.md (How to verify a release). Files: tarball, CycloneDX SBOM, SHA256SUMS.txt and the Sigstore bundle."
+        run: |
+          gh release create "$GITHUB_REF_NAME" release/* --repo "$GITHUB_REPOSITORY" --title "$GITHUB_REF_NAME" --verify-tag --notes "Verify this release with AUDIT.md (How to verify a release). Files: tarball, CycloneDX SBOM, SHA256SUMS.txt and the Sigstore bundle."
 
   publish-npm:
     # npm publishing is off for now. Disabled on purpose; package.json is also "private": true.
