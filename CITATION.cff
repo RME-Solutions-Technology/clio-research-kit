@@ -17,12 +17,13 @@ version: "0.1.0"
 date-released: "2026-10-31"
 license: Apache-2.0
 repository-code: "https://github.com/RME-Solutions-Technology/clio-research-kit"
-# identifiers:
+identifiers:
 #   - type: swh
 #     value: "swh:1:rel:PLACEHOLDER0000000000000000000000000000"
 #     description: Software Heritage identifier of the release (see AUDIT.md)
-#   - type: doi
-#     value: "10.5281/zenodo.PLACEHOLDER"
+  - type: doi
+    value: "10.5281/zenodo.23812036"
+    description: Zenodo concept DOI (all versions)
 keywords:
   - Darwin Core
   - RO-Crate
