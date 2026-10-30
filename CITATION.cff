@@ -1,4 +1,4 @@
-# Citation metadata for software citation (CFF 1.2.0). date-released is added when the v0.1.0 tag is made.
+# Citation metadata for software citation (CFF 1.2.0). Zenodo reads this file when a release is published.
 # See AUDIT.md for the Software Heritage identifier step.
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
@@ -9,15 +9,12 @@ abstract: >-
   (Darwin Core Archive, BagIt, RO-Crate, Frictionless Data Package), publishes field-lane schemas as JSON Schema,
   and imports CSV, JSON, NDJSON and exports from ODK Central and KoboToolbox. Pre-1.0 (version 0.1.0).
 authors:
-  - family-names: "Evans"
-    given-names: "Rob"
-    affiliation: "RME Solutions Technology"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - name: "RME Solutions Technology"
 contact:
   - name: "Clio research kit maintainers"
     email: "security@cliomuseum.org"
 version: "0.1.0"
-# date-released: add the release date when the v0.1.0 tag is made (left out until then).
+date-released: "2026-10-31"
 license: Apache-2.0
 repository-code: "https://github.com/RME-Solutions-Technology/clio-research-kit"
 # identifiers:
