@@ -2,14 +2,14 @@
 
 This is for someone who wants to check a release of this software without taking the maintainers' word for it. Every step below is a command you run yourself. The structure follows the checklist "Auditing an open-source data/identity tool to code level".
 
-**Status: pre-1.0 (v0.1.0).** Until the first tag is pushed no release, signature, attestation or Software Heritage entry exists, so steps 2 and 7 describe what you will be able to do once it does; `X.Y.Z` stands for the version. Steps 1, 3, 4, 5 and 6 work today on a checkout of the repository. A step that depends on something that does not exist yet is marked **(not yet possible)**.
+**Status: pre-1.0. v0.1.0 was released on 30 October 2026** with a Sigstore-signed tarball, a GitHub build attestation, a CycloneDX SBOM and `SHA256SUMS.txt` ([release page](https://github.com/RME-Solutions-Technology/clio-research-kit/releases/tag/v0.1.0)). `X.Y.Z` stands for the version. Steps 1 to 6 work today. Step 7 is only partly possible: the release is not yet archived at Software Heritage, so it is marked **(not yet possible)**.
 
 What a clean audit shows, and what it does not: it shows (once a release exists and the workflow has run) that the release was built from the tagged source by the published workflow, that its dependencies match the SBOM, that the tests pass on your machine, and that the library's output satisfies the format validators listed. It does not show the code is free of bugs, that it was read by an independent reviewer (see [docs/ai-use.md](docs/ai-use.md)), or that the validators catch everything.
 
 ## 0. Get the source
 
 ```
-git clone https://github.com/RME-Solutions-Technology/clio-research-kit.git     # (once the repository is public)
+git clone https://github.com/RME-Solutions-Technology/clio-research-kit.git
 cd clio-research-kit
 git verify-tag vX.Y.Z                           # needs the maintainers' signing key; see the release notes
 git checkout vX.Y.Z
@@ -37,9 +37,9 @@ node -e "console.log(Object.keys(require('./package.json').dependencies ?? {}))"
 pnpm run check:imports                                                              # src/ imports only itself and node:
 ```
 
-## 2. Check signed release provenance (Sigstore / SLSA)  **(not yet possible)**
+## 2. Check signed release provenance (Sigstore / SLSA)
 
-Each release will carry three independent proofs. Check all three.
+Each release carries three independent proofs. Check all three.
 
 **GitHub artifact attestation (SLSA build provenance):**
 
@@ -128,7 +128,7 @@ node scripts/generate-vectors.ts --check     # rebuilds and compares byte for by
 
 A second implementation can be compared against these files directly. For the ODK Central and KoboToolbox connectors, the vectors are the fixtures: see [test/fixtures/README.md](test/fixtures/README.md) for which are copies of ODK's own sample forms (Apache-2.0) and which are synthetic.
 
-## 7. Citation and Software Heritage  **(not yet possible)**
+## 7. Citation and Software Heritage  **(Software Heritage: not yet possible)**
 
 - [CITATION.cff](CITATION.cff) holds the citation metadata; author, repository and version are filled in; `date-released` is added when the v0.1.0 tag is made.
 - Archive the release at Software Heritage ("Save Code Now": <https://archive.softwareheritage.org/save/>, no account needed) and record the identifier here and in `CITATION.cff`:
@@ -151,13 +151,13 @@ The project's checklist (from the field-tools research) against this repository 
 
 | # | Checklist item | Status |
 |---|---|---|
-| 1 | OpenSSF Scorecard | Workflow written, disabled; needs a public repository |
+| 1 | OpenSSF Scorecard | Workflow active on the public repository |
 | 2 | Reproducible builds | `tsc` compile step; reproducibility of the tarball not yet tested (step 1) |
-| 3 | Signed releases and provenance | Workflow and plan written, never run (step 2, `docs/release-signing.md`) |
+| 3 | Signed releases and provenance | v0.1.0 signed and attested by the release workflow (step 2, `docs/release-signing.md`) |
 | 4 | SBOM | `scripts/generate-sbom.ts`, CycloneDX 1.6, runtime SBOM is empty (step 3) |
 | 5 | Security policy and threat model | `SECURITY.md` (GitHub private reporting, security@cliomuseum.org); `docs/threat-model.md` with tests |
 | 6 | Tests and static analysis | Unit, hostile-input and cross-check tests, type checking. No code-coverage figure and no static analyser (CodeQL or similar) yet; measure coverage yourself |
-| 7 | Software Heritage | Placeholders only (step 7) |
+| 7 | Software Heritage | Not archived yet; placeholders only (step 7) |
 | 8 | Publish the same evidence for Clio itself | This file, the SBOM, the threat model and the vectors are that evidence for the open repository. A threat model for the signing code is out of scope: that code is not here |
 
-Still open: a human line-by-line code review (none has been done; see docs/ai-use.md), a real secret scanner run, the GBIF validator report, and the Software Heritage identifiers, which exist only after the first release.
+Still open: a human line-by-line code review (none has been done; see docs/ai-use.md), a real secret scanner run, the GBIF validator report, and the Software Heritage identifiers (the release is not archived yet).
